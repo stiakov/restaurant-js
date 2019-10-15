@@ -28,9 +28,7 @@ const aux = {
     }
   },
   attachImgEvent: (parent, event, src) => {
-    parent.addEventListener(event, () => {
-      Object.assign(document.getElementById('img_container'), { src: src });
-    });
+    parent.addEventListener(event, () => Object.assign(document.getElementById('img_container'), { src: src }));
   },
 };
 
