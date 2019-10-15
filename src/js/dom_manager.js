@@ -36,7 +36,7 @@ class Display {
         element: 'img',
         id: 'nav-img',
         attributes: { src: env.logoSrc },
-      }
+      },
     ];
 
     elemCollection.forEach((item, idx) => {
@@ -59,7 +59,7 @@ class Display {
 
   addContainer() {
     const cont = document.createElement('div');
-    Object.assign(cont, {id: 'main-container'}, { className: 'container' });
+    Object.assign(cont, { id: 'main-container' }, { className: 'container' });
     this.getBody().appendChild(cont);
   }
 
@@ -81,7 +81,7 @@ class Display {
       {
         name: 'Contact',
         event: () => console.log('From Contact'),
-      }
+      },
     ];
     const menu = Object.assign(document.createElement('div'), { className: 'navbar-menu' });
     const start = Object.assign(document.createElement('div'), { className: 'navbar-start' });

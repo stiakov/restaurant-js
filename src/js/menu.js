@@ -1,6 +1,6 @@
 import environmentVars from './env_var';
 
-let env = environmentVars;
+const env = environmentVars;
 
 const aux = {
   tabContainer: () => Object.assign(document.createElement('div'), { id: 'tabContainer' }),
@@ -21,7 +21,7 @@ const aux = {
     if (id === 'right') {
       const card = Object.assign(document.createElement('div'), { className: 'card-image' });
       const figure = Object.assign(document.createElement('figure'), { className: 'image is-3by4' });
-      const img = Object.assign(document.createElement('img'), { src: env.menuImgSrc },  { id: 'img_container' });
+      const img = Object.assign(document.createElement('img'), { src: env.menuImgSrc }, { id: 'img_container' });
       figure.appendChild(img);
       card.appendChild(figure);
       parent.appendChild(card);
@@ -29,9 +29,9 @@ const aux = {
   },
   attachImgEvent: (parent, event, src) => {
     parent.addEventListener(event, () => {
-      Object.assign(document.getElementById('img_container'), {src: src});
+      Object.assign(document.getElementById('img_container'), { src: src });
     });
-  }
+  },
 };
 
 const menu = {
@@ -49,7 +49,7 @@ const menu = {
       element: 'div',
       id: 'right',
       class: 'tile is-4 is-vertical',
-    }
+    },
   ],
   products: [
     {
@@ -87,7 +87,7 @@ const menu = {
       description: 'Exotic fruits becoming marvelous nectars.',
       img_path: '../src/img/slices/brooke-lark-juices.png',
       price: '$9.00',
-    }
+    },
   ],
   populateMenu: () => {
     const left = document.getElementById('left');
@@ -105,6 +105,8 @@ const menu = {
             break;
           case 'price':
             aux.createAndAssign(cell, ['p', 'content', product.price]);
+            break;
+          default:
             break;
         }
       });
@@ -133,7 +135,7 @@ const menu = {
     aux.getMainContainer().appendChild(tabContainer);
     menu.populateMenu();
     return tabContainer;
-  }
+  },
 };
 
 export default menu;
