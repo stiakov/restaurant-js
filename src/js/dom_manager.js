@@ -14,6 +14,13 @@ class Display {
     return document.getElementsByTagName('body')[0];
   }
 
+  cleanTabContainer() {
+    let tabContent = document.getElementById('tabContainer');
+    while (tabContent.hasChildNodes()) {
+      tabContent.removeChild(tabContent.lastChild);
+    }
+  }
+
   setNavbar() {
     const nav = [];
     let parent;
@@ -60,6 +67,8 @@ class Display {
   addContainer() {
     const cont = document.createElement('div');
     Object.assign(cont, { id: 'main-container' }, { className: 'container' });
+    const tabContainer = Object.assign(document.createElement('div'), { id: 'tabContainer' });
+    cont.appendChild(tabContainer);
     this.getBody().appendChild(cont);
   }
 
@@ -90,6 +99,7 @@ class Display {
       const temp = document.createElement('a');
       Object.assign(temp, { className: 'navbar-item' }, { textContent: tab.name });
       temp.addEventListener('click', () => {
+        this.cleanTabContainer();
         tab.event();
       });
       start.appendChild(temp);
