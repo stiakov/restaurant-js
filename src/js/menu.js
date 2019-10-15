@@ -7,7 +7,7 @@ const aux = {
 
   createAndAssign: (parent, data) => {
     const temp = Object.assign(
-      document.createElement(data[0]), { className: data[1] }, { textContent: data[2] },
+      document.createElement(data[0]), { className: data[1] }, { textContent: data[2] }
     );
     parent.appendChild(temp);
     return temp;
