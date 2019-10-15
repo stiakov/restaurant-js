@@ -1,3 +1,3 @@
-import Display from './js/dom_manager.js';
+import Display from './js/dom_manager';
 
-const dom = new Display();
+new Display();

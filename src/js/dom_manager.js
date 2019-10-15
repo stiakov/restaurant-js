@@ -1,7 +1,8 @@
-import env_vars from './env_var';
+import environmentVars from './env_var';
 import menu from './menu';
+
 const menuGen = menu;
-let env = env_vars;
+const env = environmentVars;
 
 class Display {
   constructor() {
@@ -14,18 +15,18 @@ class Display {
   }
 
   setNavbar() {
-    let nav = [];
+    const nav = [];
     let parent;
 
-    const elem_collection = [
+    const elemCollection = [
       {
         element: 'nav',
         id: 'main-nav',
-        class: 'navbar is-light'
+        class: 'navbar is-light',
       },
       {
         element: 'div',
-        class: 'navbar-brand'
+        class: 'navbar-brand',
       },
       {
         element: 'a',
@@ -34,19 +35,19 @@ class Display {
       {
         element: 'img',
         id: 'nav-img',
-        attributes: {'src': env.logo_src}
+        attributes: { src: env.logoSrc },
       }
     ];
 
-    elem_collection.forEach((item, idx) => {
+    elemCollection.forEach((item, idx) => {
       const temp = document.createElement(item.element);
       parent = (idx === 0) ? this.getBody() : parent;
       parent.appendChild(temp);
       if (item.class) temp.className = item.class;
       if (item.id) temp.id = item.id;
       if (item.attributes) {
-        Object.keys(item.attributes).forEach(_attrib => {
-          temp.setAttribute(_attrib, item.attributes[_attrib]);
+        Object.keys(item.attributes).forEach((attr) => {
+          temp.setAttribute(attr, item.attributes[attr]);
         });
       }
       parent = temp;
@@ -58,7 +59,7 @@ class Display {
 
   addContainer() {
     const cont = document.createElement('div');
-    Object.assign(cont, {id: 'main-container'}, {className: 'container'});
+    Object.assign(cont, {id: 'main-container'}, { className: 'container' });
     this.getBody().appendChild(cont);
   }
 
@@ -67,28 +68,27 @@ class Display {
     const tabs = [
       {
         name: 'Home',
-        event: () => console.log('From Home')
+        event: () => console.log('From Home'),
       },
       {
         name: 'Menu',
-        event: () => console.log('From Menu')
+        event: () => menuGen.generateMenuContainer(),
       },
       {
         name: 'Place',
-        event: () => menuGen.generateMenuContainer()
+        event: () => console.log('From Menu'),
       },
       {
         name: 'Contact',
-        event: () => console.log('From Contact')
+        event: () => console.log('From Contact'),
       }
     ];
-    const menu = Object.assign(document.createElement('div'), {className: 'navbar-menu'});
-    const start = Object.assign(document.createElement('div'), {className: 'navbar-start'});
+    const menu = Object.assign(document.createElement('div'), { className: 'navbar-menu' });
+    const start = Object.assign(document.createElement('div'), { className: 'navbar-start' });
 
-    tabs.forEach(tab => {
+    tabs.forEach((tab) => {
       const temp = document.createElement('a');
-      Object.assign(temp, {className: 'navbar-item'}, {textContent: tab.name});
-
+      Object.assign(temp, { className: 'navbar-item' }, { textContent: tab.name });
       temp.addEventListener('click', () => {
         tab.event();
       });
@@ -97,7 +97,7 @@ class Display {
 
     menu.appendChild(start);
     nav.appendChild(menu);
-    return menu
+    return menu;
   }
 
 }
