@@ -11,7 +11,7 @@ const aux = {
     const temp = Object.assign(
       document.createElement(data[0]),
       { className: data[1] },
-      { textContent: data[2] }
+      { textContent: data[2] },
     );
     parent.appendChild(temp);
     return temp;
@@ -28,7 +28,8 @@ const aux = {
     }
   },
   attachImgEvent: (parent, event, src) => {
-    parent.addEventListener(event, () => Object.assign(document.getElementById('img_container'), { src: src }));
+    const imgContainer = document.getElementById('img_container');
+    parent.addEventListener(event, () => Object.assign(imgContainer, { src: src }));
   },
 };
 
