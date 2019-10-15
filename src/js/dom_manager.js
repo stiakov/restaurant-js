@@ -15,7 +15,7 @@ class Display {
   }
 
   cleanTabContainer() {
-    let tabContent = document.getElementById('tabContainer');
+    const tabContent = document.getElementById('tabContainer');
     while (tabContent.hasChildNodes()) {
       tabContent.removeChild(tabContent.lastChild);
     }
