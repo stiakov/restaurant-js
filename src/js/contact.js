@@ -1,3 +1,5 @@
+import images from "./images";
+
 const contactGen = {
   getTabContainer: () => document.getElementById('tabContainer'),
   mapModal: () => {
@@ -29,7 +31,7 @@ const contactGen = {
       {
         name: 'img',
         class: 'title',
-        src: '../src/img/banner_contact.png',
+        src: images.bannerContact,
       },
       {
         name: 'div',

@@ -1,6 +1,8 @@
+import images from "./images";
+
 const homeGen = {
   hero: {
-    imgSrc: '../src/img/banner.png',
+    imgSrc: images.banner,
     elements: [
       {
         name: 'section',

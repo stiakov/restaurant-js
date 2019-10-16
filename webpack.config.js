@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   // mode: 'development',
+  watch: true,
   entry: './src/index.js',
   output: {
     filename: 'main.js',
@@ -29,6 +30,17 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.html$/,
+        use: [{
+          loader: 'html-loader',
+          options: {
+            minimize: true,
+            removeComments: false,
+            collapseWhitespace: false
+          }
+        }],
+      }
     ],
   },
 };
