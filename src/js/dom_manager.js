@@ -1,10 +1,12 @@
 import environmentVars from './env_var';
 import menu from './menu';
 import homeGen from './home';
+import contactGen from './contact';
 
 const env = environmentVars;
 const menuGen = menu;
 const home = homeGen;
+const contact = contactGen;
 
 class Display {
   constructor() {
@@ -93,7 +95,7 @@ class Display {
       },
       {
         name: 'Contact',
-        event: () => console.log('From Contact'),
+        event: () => contact.generateBanner(),
       },
     ];
     const menu = Object.assign(document.createElement('div'), { className: 'navbar-menu' });
@@ -113,7 +115,6 @@ class Display {
     nav.appendChild(menu);
     return menu;
   }
-
 }
 
 export default Display;
