@@ -2,8 +2,8 @@ import environmentVars from './env_var';
 import menu from './menu';
 import homeGen from './home';
 
-const menuGen = menu;
 const env = environmentVars;
+const menuGen = menu;
 const home = homeGen;
 
 class Display {

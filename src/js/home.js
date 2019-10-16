@@ -1,6 +1,6 @@
 const homeGen = {
   hero: {
-    imgSrc: '../src/img/slices/banner.png',
+    imgSrc: '../src/img/banner.png',
     elements: [
       {
         name: 'section',
