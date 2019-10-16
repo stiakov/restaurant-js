@@ -17,12 +17,12 @@ It makes use of:
 ## Preview
 There are two options to load this SPA.
 * Visit the [Live Version Here](https://stiakov.github.io/restaurant-js/).
-* Download the repo, checkout to the **development** branch and load the `./dist/index.html` in your browser.
+* Download the repo, checkout to **development** branch and load the `./dist/index.html` in your browser.
 
 ## Development and contributions
 
 * Fork and/or download the repo.
-* Run `npm install --> (This command should install the **[Webpack 4 Tools](https://webpack.js.org/guides/getting-started/)**)
+* Run `npm install` _(This command should install the **[Webpack 4 Tools](https://webpack.js.org/guides/getting-started/)**)_
 * Improve the code stored in `./src/`
 * Run `npm run watch` to compile the assets.
 * Send a Pull Request.
