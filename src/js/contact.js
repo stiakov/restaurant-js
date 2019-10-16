@@ -49,7 +49,7 @@ const contactGen = {
       },
       {
         name: 'a',
-        class: 'button is-outlined',
+        class: 'button is-dark',
         text: 'Show me a map',
         id: 'map-button',
         event: () => {
