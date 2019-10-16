@@ -5,7 +5,7 @@ const contactGen = {
     const backg = Object.assign(document.createElement('div'), { className: 'modal-background' });
     backg.addEventListener('click', () => {
       const modal = document.getElementById('main-modal');
-      modal.classList.toggle('is-active')
+      modal.classList.toggle('is-active');
     });
     const content = Object.assign(document.createElement('div'), { className: 'modal-content' });
     const map = document.createElement('iframe');
@@ -24,7 +24,7 @@ const contactGen = {
       {
         name: 'article',
         class: 'message has-text-centered',
-        id: 'hero-section'
+        id: 'hero-section',
       },
       {
         name: 'img',
@@ -45,7 +45,7 @@ const contactGen = {
       {
         name: 'div',
         class: 'message-body subtitle',
-        text: '3004559895'
+        text: '3004559895',
       },
       {
         name: 'a',
@@ -54,7 +54,7 @@ const contactGen = {
         id: 'map-button',
         event: () => {
           const modal = document.getElementById('main-modal');
-          modal.classList.toggle('is-active')
+          modal.classList.toggle('is-active');
         },
       },
     ],
@@ -66,7 +66,7 @@ const contactGen = {
     contactGen.container.elements.forEach((elem, idx) => {
       const temp = document.createElement(elem.name);
       if (elem.name === 'img') temp.src = elem.src;
-      if (elem.name === 'a') temp.addEventListener('click',  elem.event);
+      if (elem.name === 'a') temp.addEventListener('click', elem.event);
       if (elem.class) temp.className = elem.class;
       if (elem.id) temp.id = elem.id;
       if (elem.text) temp.innerHTML = elem.text;
