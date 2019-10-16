@@ -1,3 +1,6 @@
+![](https://img.shields.io/badge/beta-functional-green?style=flat-square)
+![node](https://img.shields.io/node/v/webpack)
+
 # Single Page App for a Restaurant (BETA)
 Practicing with OOP and DOM JS functions to build a fictional restaurant's page.
 
@@ -5,7 +8,7 @@ It makes use of:
 
 * **Vanilla JS** as DOM manager.
 * **Bulma CSS** as styling framework.
-* **Webpack 4** as transpiler for JavaScript.
+* **Webpack 4** as transpiler for JavaScript, CSS and images.
 
 ## Requirements
 
@@ -13,13 +16,16 @@ It makes use of:
 
 ## Preview
 There are two options to load this SPA.
-* Visit the [Live Version Here](https://raw.githack.com/stiakov/restaurant-js/contact/dist/index.html).
-* Download the repo, checkout to the **contact Branch** and load the `./dist/index.html` in your browser.
+* Visit the [Live Version Here](https://stiakov.github.io/restaurant-js/).
+* Download the repo, checkout to the **development** branch and load the `./dist/index.html` in your browser.
 
 ## Development and contributions
 
-Just fork the repo, improve the code stored in `./src/js/` and run `npm run watch` to compile the JS assets.
-You can send a Pull Request finally.
+* Fork and/or download the repo.
+* Run `npm install --> (This command should install the **[Webpack 4 Tools](https://webpack.js.org/guides/getting-started/)**)
+* Improve the code stored in `./src/`
+* Run `npm run watch` to compile the assets.
+* Send a Pull Request.
 
 ## Contact
 Reach me at:
