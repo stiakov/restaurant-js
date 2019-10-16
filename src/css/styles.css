@@ -44,6 +44,6 @@ html {
   border-radius: 7px;
 }
 
-#main-nav {
-  /*background-color: rgba(245, 245, 245, 0.8);*/
+#map-button {
+  margin-bottom: 30px;
 }
