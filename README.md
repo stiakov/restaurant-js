@@ -4,7 +4,7 @@ Practicing with OOP and DOM JS functions to build a fictional restaurant's page.
 It makes use of:
 
 * **Vanilla JS** as DOM manager.
-* **Bulma CSS** framework.
+* **Bulma CSS** as styling framework.
 * **Webpack 4** as transpiler for JavaScript.
 
 ## Requirements
