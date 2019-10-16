@@ -1,8 +1,10 @@
 import environmentVars from './env_var';
 import menu from './menu';
+import homeGen from './home';
 
-const menuGen = menu;
 const env = environmentVars;
+const menuGen = menu;
+const home = homeGen;
 
 class Display {
   constructor() {
@@ -48,6 +50,12 @@ class Display {
 
     elemCollection.forEach((item, idx) => {
       const temp = document.createElement(item.element);
+      if (item.element === 'a') {
+        temp.addEventListener('click', () => {
+          this.cleanTabContainer();
+          home.generateBanner();
+        });
+      }
       parent = (idx === 0) ? this.getBody() : parent;
       parent.appendChild(temp);
       if (item.class) temp.className = item.class;
@@ -77,15 +85,11 @@ class Display {
     const tabs = [
       {
         name: 'Home',
-        event: () => console.log('From Home'),
+        event: () => home.generateBanner(),
       },
       {
         name: 'Menu',
         event: () => menuGen.generateMenuContainer(),
-      },
-      {
-        name: 'Place',
-        event: () => console.log('From Menu'),
       },
       {
         name: 'Contact',

@@ -38,3 +38,12 @@ html {
 .card > .subtitle {
   margin-bottom: 8px !important;
 }
+
+#hero-section {
+  opacity: .5;
+  border-radius: 7px;
+}
+
+#main-nav {
+  /*background-color: rgba(245, 245, 245, 0.8);*/
+}
